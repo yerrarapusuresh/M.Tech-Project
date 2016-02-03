@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class GraphMaker
 {
-	public static GraphAdjMatrix main(String[] args) throws IOException
+	public static void main(String[] args) throws IOException
 	{
 /************************************* MISCELLANEOUS CODE FOR READING INPUT PARTATIONED GRAPH AND MAKE GRAPHS******************************/
 		if(args.length < 1)
-			return null;
+			return ;
 
 		int npart = numOfpartations(args[0]);
 
@@ -17,7 +17,7 @@ public class GraphMaker
 		if(graphpartation.exists() == false)
 		{
 			System.out.println("Entered file does not existed in disk");
-			return null;
+			return ;
 		}
 
 		FileReader fr = new FileReader(graphpartation);
@@ -121,14 +121,11 @@ public class GraphMaker
 
 		miniGraphs[miniGraphs.length-1].computeAPSP();
 /**************************************************************STEP 3 : FINISHED **************************************************************************************/
-	/******************************************IT IS PRINTS EACH PARTATION OUTPUT INCLUDING BOUNDARY GRAPH****************************************
+	/******************************************IT IS PRINTS EACH PARTATION OUTPUT INCLUDING BOUNDARY GRAPH****************************************/
 	
 
 		for(int i = 0; i < miniGraphs.length; i++)
-		{
-
-		//	System.out.println(miniGraphs[i]);
-		}*/
+			System.out.println(miniGraphs[i]);
 
 	/*********************** IT PRINTS WHICH NODE BELONGS TO WHICH PARTATION BY USING PARTS ARRAY LIST
 		for(int i = 0; i < parts.length; i++)
@@ -145,7 +142,7 @@ public class GraphMaker
 		
 			
 		br.close();
-		return miniGraphs[miniGraphs.length-1];
+		//return miniGraphs[miniGraphs.length-1];
 		
 		
 	}

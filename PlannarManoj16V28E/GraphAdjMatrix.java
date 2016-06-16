@@ -45,6 +45,11 @@ public class GraphAdjMatrix
 
 	public String toString()
 	{
+for(int i = 0; i < matrix.length ; i++)
+			for(int j = 0; j < matrix.length; j++)
+				System.out.println(matrix[i][j]);
+					
+/**
 		if(verticesOrder == null)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -71,7 +76,8 @@ public class GraphAdjMatrix
 				sb.append(String.format("\n"));
 			}
 			return sb.toString();
-		}
+		}**/
+	return "1";
 	}
 
 	public void computeAPSP()

@@ -1,5 +1,6 @@
-import java.util.HashMap;
 import java.util.Map;
+import java.util.HashMap;
+
 
 public class AdjMatrix
 {
@@ -23,6 +24,10 @@ public class AdjMatrix
 
 	}
 
+	public int numberOfBoundaryVerties() {
+		return this.numberOfBoundaryVerties;
+	}
+
 	public void addEdge(int i, int j, double value) {
 		matrix[i][j] = value;
 	}
@@ -42,6 +47,10 @@ public class AdjMatrix
 		for(int i = 0; i < itv.length; i++)
 				if(isItBoundary[indexToVertex[i]])
 					numberOfBoundaryVerties++;
+	 }
+
+	 public int indexToVertex(int index) {
+	 	return indexToVertex[index];
 	 }
 
 
